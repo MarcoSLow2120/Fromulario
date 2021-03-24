@@ -1,0 +1,560 @@
+<div class="FirstSection">
+  <nav class="navbar navbar-expand-xs smart-scroll navbar-light shadow-lg p-3 bg fixed-top">
+    <div class="container">
+      <a [routerLink]="['/inicio']" routerLinkActive="router-link-active"><img src="../../../assets/logo.png" class=""
+          alt="Logo Seven Life" width="190px"></a>
+          <p class="farfir" id="obj1">Echa un vistazo a nuestros productos</p>
+          <i class="far fa-arrow-alt-circle-right" id="obj1"></i>   
+      <button class="navbar-toggler menu-wrapper" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" id="boton3" onclick="visibilidad('#informacion', false)">
+        <div class="hamburger-menu"></div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto scrollable-menu">
+          <h3 class="sub-nav">Categorías de productos</h3>
+          <div class="d-lg-flex justify-content-lg-around">
+            <div class="mr-5">
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="['/covid-19/1']" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 mt-4 border-hover">
+                  <i class="fas fa-user-nurse mr-2"></i>
+                  Coronavirus (COVID-19)</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/calzado/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-shoe-prints mr-2"></i>
+                  Calzado de Protección</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/Extintores' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-fire-extinguisher mr-2"></i>
+                  Extintores</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/seguridad-vial/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-road mr-2"></i>
+                  Seguridad Vial y de Construcción</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/proteccion-contra-caidas/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-universal-access mr-2"></i>
+                  Protección contra Caídas</a>
+              </li>
+            </div>
+            <div>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/proteccion-auditiva/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 mt-4 border-hover">
+                  <i class="fas fa-headphones-alt mr-2"></i>
+                  Protección Auditivas</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/Chalecos/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-window-restore"></i>
+                  Chalecos</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a class="nav-link dropdown-toggle pt-3 border-hover" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  <i class="fas fa-child mr-2"></i>
+                  Vestimenta</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item border-hover" [routerLink]="[ '/proteccion-corporal/1' ]" routerLinkActive="router-link-active">Chamarras y Sudaderas</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item border-hover" href="#">Uniformes</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="['/proteccion-para-cabeza/1']" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-hard-hat mr-2"></i>
+                  Protección para Cabeza</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="['/proteccion-para-manos']" class="nav-link pt-3 border-hover">
+                  <i class="fas fa-hand-paper mr-2"></i>
+                  Protección para Manos</a>
+              </li>
+            </div>
+            <div>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/proteccion-contra-la-lluvia/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 mt-4 border-hover">
+                  <i class="fas fa-cloud-rain mr-2"></i>
+                  Protección para la Lluvia</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="['/proteccion-respiratoria/1']" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 mt-4 border-hover">
+                  <i class="fas fa-wind mr-2"></i>
+                  Protección Respiratoria</a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/proteccion-facial/1' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 border-hover">
+                  <i class="fas fa-eye mr-2"></i>
+                  Protección Ocular y Facial </a>
+              </li>
+              <li class="nav-item dropdown mb-4">
+                <a [routerLink]="[ '/cursos' ]" routerLinkActive="router-link-active"
+                  class="nav-link pt-3 mt-4 border-hover">
+                  <i class="fab fa-discourse mr-2"></i>
+                  Cursos</a>
+              </li>
+
+              <!-- <li class="nav-item mb-4">
+                        <a [routerLink]="['/iniciar-sesion']" routerLinkActive="router-link-active"  class="nav-link pt-3 border-hover">
+                          <i class="fas fa-users mr-2"></i>
+                          Iniciar sesión
+                        </a>
+                      </li>
+                      -->
+
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000"
+    data-pause="false">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+    </ol>
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="image-general-one">
+          <div class="container">
+            <div class="row  col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 col-xs-12 ">
+              <div class="info">
+                <h1>En <span>Seven Life</span> nos importas tú.<br>Por eso garantizamos tú seguridad hasta
+                  <span>7</span> veces más que la competencia</h1>
+                <a class="btn btn-orange" (click)="toTwoSection();">Saber más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-general-two">
+          <div class="container">
+            <div class="row col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 col-xs-12">
+              <div class="info">
+                <h1>Si te cuidas <span>tú</span><br>Nos cuidamos <span>todos</span></h1>
+                <hr class="separator">
+                <p class="mt-3">Todos podemos hacer algo para mitigar y contener la expansión de las enfermedades.<br>En
+                  este caso, se
+                  trata del coronavirus <span>SARS-COV2.</span><br><br>
+
+                  En <span class="seven-life-color">Seven Life</span> te ofrecemos productos contra el
+                  <span>(COVID-19)</span><br> para que puedas
+                  proteger tanto tú salud como la de tú familia.
+
+                </p>
+
+                <a class="btn btn-waterGreen" (click)="toThirdSection();">Ver productos</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-general-three">
+          <div class="container">
+            <div class="row col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 col-xs-12">
+              <div class="info">
+                <h1><span>Solos</span> podemos hacer poco,<br><span>juntos</span> podemos hacer mucho</h1>
+                <p>En <span>Seven Life</span> te ofrecemos cursos para que puedas capacitar a tú gente en caso de
+                  situaciones que ocurran en un futuro.<br><br>Da clic en el botón de abajo para echarle un vistazo a la
+                  sección de cursos y ver unos vídeos de lo que te ofrecemos.</p>
+                <a class="btn btn-waterBlue" (click)="toFiveSection();">Ver los vídeos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="TwoSection">
+  <div class="all-TS d-lg-flex justify-content-lg-flex">
+    <div class="shadow-lg rounded TS-One">
+      <i class="fas fa-building"></i>
+      <h1 class="text-center pt-3">Acerca de nosotros</h1>
+      <p class="pt-2">Somos una empresa 100% mexicana creada con la finalidad de fabricar, comercializar, distribuir,
+        capacitar y gestionar
+        todo lo relacionado a seguridad e higiene de acuerdo con las normas establecidas de seguridad vigentes, con los
+        estándares y certificaciones nacionales e internacionales.</p>
+    </div>
+    <div class="shadow-lg rounded TS-Two">
+      <i class="fas fa-eye"></i>
+      <h1 class="text-center pt-3">Visión</h1>
+      <p class="pt-2">Ser una empresa líder altamente rentable, comercializando los servicios y productos, dedicada a la
+        distribución de
+        equipo de seguridad personal e industrial, fabricación de chalecos, chamarras, uniformes para industria, áreas
+        administrativas, capacitación para personal y gestoría.</p>
+    </div>
+    <div class="shadow-lg rounded TS-Three">
+      <i class="fas fa-flag"></i>
+      <h1 class="text-center pt-3">Misión</h1>
+      <p class="pt-2">Mejorar y promover las condiciones de seguridad en la industria, cuidando la integridad humana
+        ofreciendo equipos de
+        seguridad, señalización y capacitación para empresas e industrias, oficinas, escuelas, hospitales, gasolineras,
+        vialidades y parques logísticos.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="ThirdSection">
+  <div class="all-THS p-3">
+    <div class="header-container">
+      <h2><i class="fas fa-user-nurse"></i> PRODUCTOS DESTACADOS ANTE EL <span>(COVID-19)</span></h2>
+    </div>
+    <div class="body-container container d-lg-flex justify-content-lg-between pt-3">
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/COVID-19/Cubrebocas.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>Cubrebocas</h6>
+        <a [routerLink]="['/covid-19/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/COVID-19/gel-antibacterial.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>Gel antibacterial</h6>
+        <a [routerLink]="['/covid-19/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/COVID-19/protector-facial.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>Protector faciales</h6>
+        <a [routerLink]="['/covid-19/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/COVID-19/desinfectante.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>Desinfectantes</h6>
+        <a [routerLink]="['/covid-19/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="header-container">
+      <h2><i class="fas fa-shoe-prints"></i>PRODUCTOS DESTACADOS DE CALZADO</h2>
+    </div>
+    <div class="body-container container d-lg-flex justify-content-lg-between pt-5 pb-5 mt-3">
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Clazado/Isik electric.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>TENIS INDUSTRIAL ISIK ELECTRIC</h6>
+        <a [routerLink]="['/calzado/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Clazado/Isik fire.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>TENI INDUSTRIAL ISIK FIRE</h6>
+        <a [routerLink]="['/calzado/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Clazado/Isik Orange.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>TENI INDUSTRIAL ISIK ORANGE</h6>
+        <a [routerLink]="['/calzado/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Clazado/Isik intense.png" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>TENI INDUSTRIAL ISIK INTENSE</h6>
+        <a [routerLink]="['/calzado/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="header-container">
+      <h2><i class="fas fa-window-restore"></i>PRODUCTOS DESTACADOS DE CHALECOS</h2>
+    </div>
+    <div class="body-container container d-lg-flex justify-content-lg-between pt-5 pb-5 mt-3">
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Chalecos/Test.jpeg" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>CHALECO MF COMBINADO</h6>
+        <a [routerLink]="['/Chalecos/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Chalecos/test2.jpeg" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>CHALECO GRAND BAY GROS CON AZUL CIELO</h6>
+        <a [routerLink]="['/Chalecos/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Chalecos/test3.jpeg" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>CHALECO TYMBERLAND NEGRO CON VIVOS BLANCOS</h6>
+        <a [routerLink]="['/Chalecos/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="shadow-container p-3 rounded">
+        <img src="../../../assets/products/Chalecos/test4.jpeg" alt="Cubrebocas" class="w-75 m-auto d-block">
+        <h6>CHALECO GRAND BAY VINO CON GRIS</h6>
+        <a [routerLink]="['/Chalecos/1']" routerLinkActive="router-link-active"
+          class="btn btn-sm btn-medical mt-2 shadow-btn rounded">
+          Ver producto
+          <svg width="1.3em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="FourSection">
+  <h2 class="text-center FFM FW-700">¿Por qué comprar con nosotros?</h2>
+  <div class="all-FUS d-lg-flex justify-content-lg-around">
+    <div>
+      <i class="fas fa-star faa-pulse star"></i>
+      <p><span>Te brindamos un excelente servicio</span><br>Ya sea que te comuniques con nosotros por teléfono o
+        asistas a nuestra
+        comercializadora en persona, para brindarte el mejor servicio posible, donde te asesoremos que comprar y porqué.
+      </p>
+    </div>
+    <div>
+      <i class="fas fa-truck icon-truck truck"></i>
+      <p><span>Realizamos envíos dentro y fuera del país</span><br>Ya sea que necesites un producto en el país o en el
+        extranjero, nosotros
+        nos encargamos de que tu pedido llegue a la puerta de tú casa, sin importar donde te encuentres.</p>
+    </div>
+    <div>
+      <span class="material-icons icon-verified verified">verified</span>
+      <p><span>Variedad de productos</span><br>Tenemos una gran variedad de productos con certificaciones y de marcas
+        reconocidas a nivel mundial para que
+        puedás adquirir lo que necesites de forma segura.</p>
+    </div>
+  </div>
+</div>
+
+<div class="FiveSection p-3 rounded">
+  <div id="carouselExampleControls" class="carousel slide  carousel-fade" data-pause="false" data-ride="carousel"
+    data-interval="10000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <video autoplay loop muted [muted]="'muted'">
+          <source src="../../../assets/videos/1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video autoplay loop muted [muted]="'muted'">
+          <source src="../../../assets/videos/1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video autoplay loop muted [muted]="'muted'">
+          <source src="../../../assets/videos/test3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<div class="footer">
+  <footer>
+    <div class="all-footer d-md-flex justify-content-md-around container-fluid">
+      <div class="about">
+        <h4>Acerca de Seven Life</h4>
+        <hr class="footer-space" />
+        <p>Somos una empresa 100% mexicana creada con la finalidad de Fabricar, Comercializar, Distribuir, Capacitar y
+          Gestionar todo
+          lo relacionado a Seguridad Industrial e Higiene.</p>
+        <br>
+        <img src="../../../assets/logo.png" alt="Error image" class="w-90">
+      </div>
+      <div class="social">
+        <h4>Nuestras redes sociales</h4>
+        <hr class="footer-space" />
+        <p>
+          <i class="fab fa-facebook" aria-hidden="true"></i><a
+            href="https://www.facebook.com/Comercializadora-Seven-Life-106340684640066" target="_blank"
+            rel="noopener noreferrer">Facebook</a>
+        </p>
+        <p>
+          <i class="fab fa-instagram" aria-hidden="true"></i><a href="https://www.instagram.com/" target="_blank"
+            rel="noopener noreferrer">Instagram</a>
+        </p>
+        <p>
+          <i class="fab fa-facebook-messenger" aria-hidden="true"></i><a
+            href="https://www.facebook.com/Comercializadora-Seven-Life-106340684640066" target="_blank"
+            rel="noopener noreferrer">Messenger</a>
+        </p>
+        <p>
+          <i class="fab fa-whatsapp" aria-hidden="true"></i><a
+            href="https://wa.me/+525555011542?text=Hola%20me%20gustaría%20contactarlos." target="_blank"
+            rel="noopener noreferrer">Whatsapp</a>
+        </p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Queremos escucharte!</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Queremos Escucharte!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+              </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="contact">
+        <h4>Contáctanos</h4>
+        <hr class="footer-space" />
+        <p>
+          <i class="fas fa-envelope" aria-hidden="true"></i><a
+            href="mailto:ventas@comercializadorasevenlife.com?subject=Contacto&body=Me gustaría contactar para saber más de cerca los productos y/o servicios que ofrecen.">Ventas@comercializadorasevenlife.com</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope" aria-hidden="true"></i><a
+            href="mailto:ventas2@comercializadorasecenlife.com?subject=Contacto&body=Me gustaría contactar para saber más acerca de los productos y/o servicios que ofrecen.">Ventas2@comercializadorasevenlife.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone" aria-hidden="true"></i><a href="tel:5545986086">Teléfono (1)</a>
+        </p>
+        <p>
+          <i class="fas fa-phone" aria-hidden="true"></i><a href="tel:5566926269">Teléfono (2)</a>
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i><a href="https://goo.gl/maps/SCpNTQe3H8N5SvnWA"
+            rel="noopener noreferrer" target="_blank">Ubicación</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-down-s">
+      <hr class="footer-down" />
+      <h2>
+        &copy; 2020 Comercializadora Seven Life - Todos los derechos reservados
+      </h2>
+    </div>
+  </footer>
+</div>
